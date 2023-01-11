@@ -6,5 +6,5 @@ for x in range(len(strings)):
         big = big + 1
     if strings[x].islower() == True:
         small = small + 1 
-print("Lower" ,small)
-print("Upper" ,big)
+print(small)
+print(big)
