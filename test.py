@@ -1,8 +1,8 @@
-n = 10
-for row in range(n):
-    for col in range(n):
-        if row + col < n:
-            print(' ',end="")
-        else:
-            print("#",end='')
-    print("#")
+def isEnglish(s):
+    try:
+        s.encode(encoding='utf-8').decode('ascii') 
+        except UnicodeDecodeError:
+        return False
+    else:
+        return True
+print(isEnglish(input()))
