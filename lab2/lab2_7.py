@@ -1,10 +1,15 @@
-def day_of_year(day, month, year):
-    day_of_years =
-    return day_of_years
-
 def is_leap(year):
-    if year % 4 == 0:
-        return "leap_year"
-    else :
-        return "Not leap_year"
-
+    if (year % 400 == 0):
+        return True
+    elif (year % 4 == 0) and (year % 100 != 0):
+        return True
+    else:
+        return False
+def day_of_year(day, month, year):
+    months = [31,28,31,30,31,30,31,31,30,31,30,31]
+    days = day
+    for i in range(month-1):
+        days += months[i]
+    if is_leap(year) and month > 2:
+        days+=1
+    return days

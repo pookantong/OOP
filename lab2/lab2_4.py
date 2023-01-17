@@ -1,6 +1,3 @@
-def count_minus(str):
-    count = 0
-    for i in range(len(str)):
-        count += str[i].count('-') 
-    return count
-print(count_minus(input().split()))
+def count_minus(num):
+    return len([i for i in num if i < 0])
+print(count_minus([int(i) for i in input().split()]))
