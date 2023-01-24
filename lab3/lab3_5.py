@@ -1,7 +1,7 @@
 def update_records(dictionary_record, id, property, value):
        if dictionary_record.get(id):
               if property != 'tracks' and value != '':
-                     dictionary_record[id][property] = value
+                     dictionary_record[id].update({property : value})
               elif property == 'tracks' and not dictionary_record[id].get('tracks'): 
                      dictionary_record[id].update({property : [value]})
               elif property == 'tracks' and value != '': 
