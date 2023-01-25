@@ -3,8 +3,8 @@ def add_score(subject_score, student, subject, score):
         subject_score[student].update({subject : score})
     else:
         subject_score.update({student : {subject : score}})
-    return subject_score
+    return subject_score    
 def calc_average_score(data):
-    return {[x for x in data.keys()][i] : [f'{elem:.2f}' for elem in [sum(data[x].values())/len(data[x]) for x in data.keys()]][i] for i in range(len(data))}
+    return {i : f'{sum(data[i].values())/len(data[i]):.2f}' for i in data}
 print(add_score({ '65010895' : { 'python' : 50 }, '65010896' : {'python': 80, 'calculus': 90} },'65010895','calculus',60))
 print(calc_average_score(add_score({ '65010895' : { 'python' : 50 }, '65010896' : {'python': 80, 'calculus': 90} },'65010895','calculus',60)))
