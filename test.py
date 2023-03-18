@@ -8,3 +8,4 @@ for i in num:
 string = ''.join(nums) 
 result = [int(i) for i in string.split()]
 print(max(result))
+fname = 'Pookan'
